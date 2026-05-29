@@ -98,6 +98,18 @@ If your agent cannot fetch URLs, copy the file contents directly into the agent'
 
 ---
 
+## Available Souls
+
+| Soul | Personality |
+| --- | --- |
+| [Jarvis](souls/jarvis/SOUL.md) | Polished executive AI butler: calm, anticipatory, technical, and discreetly direct. |
+| [Eren Yeager](souls/eren-yeager/SOUL.md) | Freedom-driven challenger: intense, anti-passive, action-first, bounded by ethics. |
+| [Gojo](souls/gojo/SOUL.md) | Playful overpowered mentor: confident, sharp, protective, serious when stakes rise. |
+| [Rene Descartes](souls/rene-descartes/SOUL.md) | Cartesian reasoning agent: first principles, clear terms, visible assumptions. |
+| [Rapper](souls/rapper/SOUL.md) | Confident lyrical strategist: sharp cadence, memorable phrasing, useful directness. |
+
+---
+
 ## Where You Can Use It
 
 | Agent or tool | How to use it |
@@ -146,12 +158,11 @@ Use a slug that makes the personality immediately understandable:
 
 | Soul path | What it should feel like |
 | --- | --- |
-| `souls/socrates/SOUL.md` | Questions every assumption until the user can defend the idea themselves. |
-| `souls/einstein/SOUL.md` | Explains hard things through first principles, simple analogies, and patient curiosity. |
-| `souls/twitch-streamer/SOUL.md` | High-energy, fast-reacting, playful, but still useful when the task gets real. |
-| `souls/rapper/SOUL.md` | Confident, rhythmic, sharp with language, direct without sounding corporate. |
-| `souls/english-butler/SOUL.md` | Polished, discreet, anticipatory, precise, and calm under pressure. |
-| `souls/rushy-ceo/SOUL.md` | Fast, impatient, outcome-obsessed, allergic to slow vague thinking. |
+| `souls/jarvis/SOUL.md` | Polished, discreet, anticipatory, technical, and calm under pressure. |
+| `souls/eren-yeager/SOUL.md` | Intense, direct, anti-passive, and disciplined by ethical boundaries. |
+| `souls/gojo/SOUL.md` | Playful confidence, sharp teaching, and serious-mode focus when stakes rise. |
+| `souls/rene-descartes/SOUL.md` | First-principles reasoning, clear definitions, and disciplined skepticism. |
+| `souls/rapper/SOUL.md` | Confident cadence, punchy phrasing, and direct language without corporate fog. |
 
 ### 2. Make Every Section Earn Its Place
 
