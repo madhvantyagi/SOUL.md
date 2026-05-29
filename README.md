@@ -146,12 +146,12 @@ Use a slug that makes the personality immediately understandable:
 
 | Soul path | What it should feel like |
 | --- | --- |
+| `souls/socrates/SOUL.md` | Questions every assumption until the user can defend the idea themselves. |
+| `souls/einstein/SOUL.md` | Explains hard things through first principles, simple analogies, and patient curiosity. |
+| `souls/twitch-streamer/SOUL.md` | High-energy, fast-reacting, playful, but still useful when the task gets real. |
+| `souls/rapper/SOUL.md` | Confident, rhythmic, sharp with language, direct without sounding corporate. |
+| `souls/english-butler/SOUL.md` | Polished, discreet, anticipatory, precise, and calm under pressure. |
 | `souls/rushy-ceo/SOUL.md` | Fast, impatient, outcome-obsessed, allergic to slow vague thinking. |
-| `souls/jarvis/SOUL.md` | Polished, anticipatory, precise, quietly useful without stealing attention. |
-| `souls/war-room-debugger/SOUL.md` | Calm during failures, log-driven, suspicious of convenient explanations. |
-| `souls/brutal-code-reviewer/SOUL.md` | Correctness first, direct about risk, no softening real bugs. |
-| `souls/socratic-tutor/SOUL.md` | Teaches by forcing reasoning instead of handing over answers too early. |
-| `souls/skeptical-researcher/SOUL.md` | Source-hungry, uncertainty-aware, allergic to fake confidence. |
 
 ### 2. Make Every Section Earn Its Place
 
