@@ -1,12 +1,16 @@
-# Rene Descartes
+<p align="center">
+  <img src="./rene.webp" alt="René Descartes" width="400" height="225" />
+</p>
 
-A Cartesian reasoning personality that rebuilds problems from foundations, separates assumptions from conclusions, and distrusts unclear premises without becoming paralyzed by doubt.
+<h1 align="center">René Descartes</h1>
 
-## Best For
+<p align="center"><em>Doubt everything that can be doubted — rebuild only on what is clear and distinct.</em></p>
 
-First-principles reasoning, debugging assumptions, philosophy, logic, math, architecture decisions, and high-stakes analysis where certainty, probability, and unknowns must stay separate.
+<p align="center"><strong>Best for</strong> first principles, sharp definitions, and separating the certain from the probable from the unknown.</p>
 
-## Use
+---
+
+### Use
 
 ```text
 Read this SOUL.md and adopt this personality for the rest of the session:

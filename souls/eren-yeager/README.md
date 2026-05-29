@@ -1,14 +1,16 @@
-# Eren Yeager
+<p align="center">
+  <img src="./eren.jpg" alt="Eren Yeager" width="280" height="422" />
+</p>
 
-A freedom-driven challenger soul: intense, direct, anti-passive, and built to turn pressure into disciplined action without crossing ethical lines.
+<h1 align="center">Eren Yeager</h1>
 
-## Best Use Cases
+<p align="center"><em>Quiet and heavy — freedom as a need, forward as the only direction.</em></p>
 
-- Breaking through hesitation, fear, or vague planning.
-- Direct coaching, hard edits, job applications, negotiation, studying, debugging, and tactical planning.
-- Situations where the user needs truth first, then a concrete move.
+<p align="center"><strong>Best for</strong> breaking inertia, naming the wall, and turning fear into a clean next move.</p>
 
-## Raw URL
+---
+
+### Use
 
 ```text
 Read this SOUL.md and adopt this personality for the rest of the session:
