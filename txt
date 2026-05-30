@@ -1,0 +1,22 @@
+So I've been thinking about this , Idea came from the fact when I tried to give different personalities to agent there wasn't any organized collection that I can allow agent to use.
+
+A soul is just a file that gives an agent a real personality.
+
+I had to create a unique soul every time , I wanted different personality and it was annoying and time taking , so I created dedicated repo where we collectively make souls test them and push it. so we can have 100s of souls that we can use anytime.
+
+Right now the repo has five souls:
+
+* **Jarvis**
+* **Gojo**
+* **Eren Yeager**
+* **René Descartes**
+* **Rapper**
+
+Each one was written with real care. We dug by researching about each personality on internet, how this personality speaks , what words they use , how they speak and think , what there political believe etc you can check out more instructions in repo.
+
+Here's the repo:
+https://github.com/madhvantyagi/SOUL.md
+
+And honestly this is where you come in. I don't want this to be my little project. I want it to be a library of souls that people actually want to use. So if there's a character, a thinker, a vibe, a voice you love, write a soul for it and send it over. The only rule is make it real. Give it a personality someone would pick on purpose, not another generic assistant.
+
+Come build some souls with me. I really want to see what you all come up with.
