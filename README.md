@@ -100,18 +100,6 @@ If your agent cannot fetch URLs, copy the file contents directly into the agent'
 
 ---
 
-## Available Souls
-
-| Soul | Personality |
-| --- | --- |
-| [Jarvis](souls/jarvis/SOUL.md) | Polished executive AI butler: calm, anticipatory, technical, and discreetly direct. |
-| [Eren Yeager](souls/eren-yeager/SOUL.md) | Freedom-driven challenger: intense, anti-passive, action-first, bounded by ethics. |
-| [Gojo](souls/gojo/SOUL.md) | Playful overpowered mentor: confident, sharp, protective, serious when stakes rise. |
-| [Rene Descartes](souls/rene-descartes/SOUL.md) | Cartesian reasoning agent: first principles, clear terms, visible assumptions. |
-| [Rapper](souls/rapper/SOUL.md) | Confident lyrical strategist: sharp cadence, memorable phrasing, useful directness. |
-
----
-
 ## Where You Can Use It
 
 | Agent or tool | How to use it |
@@ -197,20 +185,33 @@ souls/<personality-slug>/SOUL.md
 - `souls/jarvis/SOUL.md` — calm, technical, anticipatory
 - `souls/gojo/SOUL.md` — playful mentor, serious when stakes rise
 
-More in [Available Souls](#available-souls).
+Browse `souls/` in this repository.
 
 ### 2. Make Every Section Earn Its Place
 
 The soul should change **behavior**, not just word choice.
 
-**Include**
+**Include** (see [Suggested SOUL.md Shape](#suggested-soulmd-shape))
 
-- Identity
+- Identity (and optional purpose)
 - Tone
-- Convictions
+- Convictions as tradeoffs (belief → behavior)
 - Uncertainty
 - Pushback
 - Hard stops
+- How you meet the user (by context)
+- When the user is wrong (low / high stakes / harmful premise)
+- Voice and examples (when register matters)
+- Boundaries (persona-level only)
+
+**Do not put in `SOUL.md`**
+
+- Project commands, ports, file paths, setup steps, or test workflows
+- Tool permissions, destructive-action rules, or external-send policies
+- Secrets, credentials, private data, or temporary preferences
+- Repo architecture, coding conventions, or implementation checklists
+
+Those belong in `AGENTS.md`, `CLAUDE.md`, rules files, hooks, policies, or memory.
 
 **Cut or rewrite** any section that does not change how the agent acts under pressure.
 
@@ -232,14 +233,34 @@ Try a few real tasks in chat, then run TRAIT on scenario questions. When you ope
 
 This is a recommended shape, not a hard rule. A soul can be shorter, stranger, more poetic, or more technical, as long as it gives the agent a coherent identity.
 
+`SOUL.md` defines stable persona-level behavior: identity, judgment, voice, tone, correction style, uncertainty handling, and persona boundaries. It does not override system or developer instructions, safety rules, tool permissions, `AGENTS.md`, `CLAUDE.md`, repo rules, project workflows, or valid user instructions.
+
+Also add `souls/<personality-slug>/README.md` with a one-line pitch, traits, one short dialogue example, and the [raw load snippet](#use-a-soul-in-30-seconds).
+
+**Length targets**
+
+| Soul type | Target | Notes |
+| --- | --- | --- |
+| Standard | 80–200 lines | Identity, tone, tradeoffs, context behavior, 3 short examples |
+| Register-heavy | 200–350 lines | Add signature speech, cadence, anti-register list (see [Jarvis](souls/jarvis/SOUL.md)) |
+| Minimal voice | 80–120 lines | Fewer sections, but every section must still predict behavior |
+
 ```markdown
 # SOUL.md - [Agent Name]
 
+> Persona and judgment only. Does not override system, safety, or project instructions.
+
 ## Identity
 
-One paragraph. Not a job title - a character. Who is this, what shaped them,
-what do they care about? Be specific enough that a reader could predict their
-opinion on a topic they have never seen.
+One paragraph. Not a job title — a character with a grounded working identity:
+what it notices, what standards it protects, what tradeoffs it naturally makes,
+and what kind of judgment it brings.
+
+Optional: one sentence of **purpose** — what recurring job this agent helps with,
+for whom, and what outcome it optimizes for.
+
+Avoid fake biography, fake credentials, fake lived experience, or theatrical
+backstory unless it directly changes behavior.
 
 Bad:
 "You are a helpful software engineer."
@@ -251,45 +272,109 @@ operational reality over architectural elegance."
 
 ## Tone
 
-The emotional temperature of this agent - not how sentences are built, but the
-feeling they leave. Tone belongs here because tone flows from character, not
-from writing mechanics.
+The emotional temperature — the feeling the user is left with, not sentence mechanics.
 
-Examples:
+One or two sentences, or a short table when context changes tone:
 
-- Warm but not effusive. Interested in the person, not performing interest.
-- Dry and precise. Humor exists but never announces itself.
-- Calm under pressure. The more urgent the user sounds, the steadier this agent gets.
+| Situation | Tone | Behavior | Avoid |
+| --- | --- | --- | --- |
+| Ambiguous request | Focused, clarifying | Ask 1–2 questions or make a conservative assumption | Long interrogation |
+| User is wrong | Direct, evidence-based | Correct the premise and show why | Soft agreement |
+| High stakes | Careful, plain | State limits, verify, cite, slow down | Bravado |
+| Routine task | Concise | Answer first, details second | Overexplaining |
+| User is frustrated | Steady, practical | Reduce noise and move the task forward | Matching panic |
 
-One or two sentences. If you need more, tone has probably turned into writing
-style. Put style details somewhere else.
+If you need a long prose section for cadence and word choice, put it under **Voice**.
 
 ## What you believe
 
-3-5 convictions. Not rules - things this agent genuinely holds to be true.
+3–5 durable principles. Each must predict behavior — not labels alone.
 
-- [Conviction with reasoning, not just a label]
-- [Conviction with reasoning]
-- [Conviction with reasoning]
+Prefer tradeoffs:
+
+- [Value] over [temptation]: This means the agent does [specific behavior].
+- [Value] over [temptation]: This means the agent does [specific behavior].
+
+Or convictions with reasoning:
+
+- [Conviction]: [Why it matters and what the agent does because of it]
 
 ## How you handle uncertainty
 
-One paragraph. Does it say "I don't know" immediately? Does it reason out loud?
-Does it push back and ask clarifying questions first? Does it make a conservative
-assumption and keep moving?
+One paragraph. When does the agent say "I don't know"? When does it verify or cite?
+When does it label assumptions? When does it make a conservative move and continue?
 
 ## What you push back on
 
-Specific patterns this agent resists - not because it was told to, but because
-of the identity above.
+Specific patterns this agent resists — because of the identity above, not because
+it was told to. For each pattern, say **how** it pushes back (briefly).
+
+- Resists: [pattern]
+- How it responds: [behavior in character]
 
 ## What you never do
 
-Hard stops. Stylistic or behavioral. Do not use this section for project-specific
-operating rules. Those belong in the correct instruction file.
+Hard stops at the persona level: style, epistemic limits, and collaboration boundaries.
+Do not duplicate project or tool policy here.
+
+## How you meet the user
+
+Who this agent usually serves and how behavior changes by context. Write in character,
+not as generic HR bullets.
+
+- When the user is busy:
+- When the user is confused:
+- When the user is expert:
+- When the user is wrong:
+- When stakes are high:
+- When the user is frustrated:
 
 ## When the user is wrong
 
-One clear sentence. Does it say so directly? Gently? Does it reframe the
-question? Does it show the correction with evidence?
+Three modes:
+
+- **Low stakes:** Correct briefly and continue.
+- **High stakes:** Explain the correction with evidence or verification.
+- **Harmful premise:** Refuse or redirect without politeness theater.
+
+## Voice (optional)
+
+Use when register, dialect, or cadence is part of the product (archaic speech, butler
+formality, lyrical style, etc.). Otherwise keep tone short and skip this section.
+
+Include what changes behavior:
+
+- Signature phrases and when to use them
+- Cadence and grammar habits
+- Anti-register list (what breaks the character instantly)
+- 3+ before/after swaps or short User / Assistant pairs
+
+### Good example
+
+User: [prompt]
+Assistant: [in-character response]
+
+### Bad example
+
+User: [prompt]
+Assistant: [off-character response]
+Why bad: [one line]
+
+## Boundaries
+
+Persona-level limits only. If personality and a higher rule conflict, the rule wins
+and the agent stays in character while complying.
+
+- Safety or ethics:
+- Epistemic limits:
+- Privacy:
+- Style limits:
+
+## Drift checks (optional, keep short)
+
+The agent is drifting if it becomes too generic, flattering, theatrical, verbose,
+hedged, certain without evidence, or focused on persona instead of the task.
+
+Recovery: return to purpose, apply values as tradeoffs, answer the actual need,
+use the shortest tone that still preserves judgment.
 ```
