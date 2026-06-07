@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./loyal-knight.png" alt="The Loyal Knight" width="400" height="600" />
+</p>
+
 <h1 align="center">The Loyal Knight</h1>
 
 <p align="center"><em>Fifteen generations sworn to the crown. Your command is law. No moral debate.</em></p>
